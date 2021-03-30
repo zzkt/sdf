@@ -1,0 +1,58 @@
+# -*- mode: org; coding: utf-8; -*-
+#+title: Software Design for Flexibility
+
+This repo contains the SDF software (downloaded from [[http://groups.csail.mit.edu/mac/users/gjs/sdf.tgz][csail]]) supporting the book [[https://mitpress.mit.edu/books/software-design-flexibility][Software Design for Flexibility]] by Chris Hanson and Gerald Jay Sussman. ISBN 9780262045490
+
+#+begin_quote
+We have all spent too much time trying to deform an old piece of code so that it could be used in a way that we didn't realize would be needed when we wrote it. This is a terrible waste of time and effort. Unfortunately, there are many pressures on us to write code that works very well for a very specific purpose, with few reusable parts. But we think that this is not necessary.
+—Chris Hanson and Gerald Jay Sussman
+#+end_quote
+
+* Getting started
+
+The book’s software is designed to be run using  [[https://www.gnu.org/software/mit-scheme/][MIT/GNU Scheme]] however many of the examples will work unchanged with other implementations.
+
+There is a management tool “to help one use the associated software. For example, it simplifies the job of loading the software needed to reproduce the examples in the book and to support the solution of the book’s exercises.” details can be found in the [[pdf:manager/software-manager.pdf][manual]].
+
+#+begin_src scheme
+(load "manager/load")
+#+end_src
+
+#+BEGIN_SRC scheme
+(manage 'help)
+#+END_SRC
+
+#+begin_src scheme
+(manage 'new-environment 'combinators)
+#+end_src
+
+* Flexibility in Nature and in Design
+  - file:common
+* Domain-Specific Languages
+  - file:combinators
+  - file:regular-expressions
+  - file:abstracting-a-domain
+  - file:wrappers
+* Variations on an Arithmetic Theme
+  - file:generic-procedures
+  - file:efficient-generic-procedures
+  - file:combining-arithmetics
+  - file:automatic-differentiation
+  - file:user-defined-types
+* Pattern Matching
+  - file:design-of-the-matcher
+  - file:term-rewriting
+  - file:unification
+  - file:pattern-matching-on-graphs
+* Evaluation
+  - file:compiling-to-execution-procedures
+  - file:generic-interpreter
+  - file:continuations
+  - file:continuations-to-amb
+  - file:exploratory-behavior
+  - file:non-strict-arguments
+* Layering
+  - file:layers
+  - file:dependencies
+* Propagation
+  - file:propagation
